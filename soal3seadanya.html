@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #tab1{
+            border-collapse: collapse;
+        }
+        td{
+            width: 400px;
+            text-align: center;
+        }
+        .cok{
+            background-color: brown;
+        }
+    </style>
+    <table id="tab1" border="1" >
+        <script>
+            let jum = 5
+            let obs = prompt("masukan berapa obstakel")
+            let orb = []
+            let k = 0
+            for (r = 0; r<obs ; r++){
+                let m = Math.floor(Math.random()*obs)
+                orb.push(m)
+            }
+            
+            
+            n = 0
+            
+            document.write(orb)
+            for (i = 1; i <= jum; i++){           
+                for (j = 1; j <= jum; j++){
+                    if (k == orb[n]){
+                        document.write("<td class=cok>"+k+"</td>")
+                        n = n+1
+                    }
+                    else{
+                        document.write("<td>"+k+"</td>")
+                    }
+                    
+                    k = k + 1
+                }             
+                document.write("<tr></tr>")
+            }
+           
+        </script>
+    </table>
+</body>
+</html>
